@@ -1,0 +1,254 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f4f8;
+    color: #333;
+    height: 100vh; /* Ensures body takes full height */
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: #0078d7;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .chat-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .chat-title i {
+    font-size: 28px;
+}
+
+/* Chat container */
+.chat-container {
+    
+    display: flex;
+    flex-direction: column;
+    background: #f0f4f8;
+    height: calc(100vh - 120px); /* Adjust height for header + footer */
+    overflow: hidden;
+}
+
+.chat-messages {
+    padding: 15px;
+    flex-grow: 1;
+    overflow-y: auto;
+    background: #f0f4f8;
+}
+
+.chat-messages ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.chat-messages li {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-right {
+    align-self: flex-end;
+}
+
+.message-left {
+    align-self: flex-start;
+    max-width: 70%; /* Ensures left messages do not stretch full width */
+}
+
+/* General message bubble styles */
+.message-bubble {
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: 15px;
+    line-height: 1.1;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+    background: #0078d7;
+    color: white;
+    position: relative;
+    margin-bottom: 8px; /* Space between message and timestamp */
+    word-wrap: break-word; /* Ensures long words wrap to the next line */
+    overflow-wrap: break-word; /* Same as word-wrap, but more standard */
+}
+
+.message-left .message-bubble {
+    background: #e0e0e0;
+    color: #333;
+}
+
+/* Styling for timestamp */
+.timestamp {
+    font-size: 10px;
+    opacity: 0.7;
+    margin-top: 5px; /* Space between message and timestamp */
+    display: block;
+    text-align: right;
+    padding-right: 16px; /* Align the timestamp with the message bubble */
+}
+
+.message-right .timestamp {
+    margin-left: auto;
+}
+
+.message-left .timestamp {
+    margin-right: auto;
+}
+
+/* Chat input styles */
+.chat-input {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background: #f9f9f9;
+    border-top: 1px solid #ddd;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chat-input textarea {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    resize: none;
+}
+
+
+.sendbtn {
+    margin-left: 30px;
+    margin-right: 30px;
+    background: #0078d7;
+    color: white;
+    border: none;
+    padding: 10px 14px; /* Reduced height */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.chat-input sendbtn:hover {
+    background: #005cbf;
+}
+
+.chat-input sendbtn i {
+    font-size: 18px;
+}
+
+.btn {
+    margin-left: 30px;
+    background: #0078d7;
+    color: white;
+    border: none;
+    padding: 10px 14px; /* Reduced height */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.chat-input btn:hover {
+    background: #005cbf;
+}
+
+.chat-input btn i {
+    font-size: 18px;
+}
+
+/* Scrollbar Styling */
+.chat-messages::-webkit-scrollbar {
+    width: 10px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+    border-radius: 5px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    /* Adjust header font size */
+    header {
+        font-size: 20px;
+        padding: 10px 15px;
+    }
+
+    /* Chat container adjustment */
+    .chat-container {
+        height: calc(100vh - 80px); /* Adjust for smaller header */
+    }
+
+    /* Chat input area adjustment */
+    .chat-input {
+        padding: 10px 15px;
+    }
+
+    /* Reduce button size on mobile */
+    .chat-input button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .chat-input textarea {
+        font-size: 14px;
+    }
+
+    /* Message bubbles */
+    .message-left, .message-right {
+        max-width: 90%; /* Ensure message bubbles are narrower */
+    }
+
+    /* Adjust message padding */
+    .message-bubble {
+        font-size: 14px;
+        padding: 6px 12px; /* Less padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    header {
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+
+    .chat-input button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .chat-input textarea {
+        font-size: 12px;
+    }
+
+    /* Message bubble size adjustment */
+    .message-bubble {
+        font-size: 13px;
+        padding: 5px 10px; /* Even smaller padding */
+    }
+}

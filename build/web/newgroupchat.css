@@ -1,0 +1,126 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 22-Dec-2024, 4:34:28 pm
+    Author     : speed
+*/
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.heading {
+    color: #4CAF50;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form Container */
+.form-container {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Label Styles */
+.label {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Input Field Styles */
+.input-field {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+/* Focused Input Field */
+.input-field:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Submit Button */
+.submit-btn {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Submit Button Hover */
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+/* Group List Title */
+.group-list-title {
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+/* Group List */
+.group-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Group List Item */
+.group-item {
+    background-color: #e9f5e9;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    font-size: 18px;
+    color: #333;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover Effect for Group Items */
+.group-item:hover {
+    background-color: #d0f0d0;
+}
+

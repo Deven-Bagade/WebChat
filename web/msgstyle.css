@@ -1,0 +1,154 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Nov 25, 2024, 1:07:32 PM
+    Author     : DELL
+*/
+/* chat.css */
+
+/* General styles */
+/* General Body and Page Styles */
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Chat container */
+.chat-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Heading */
+.chat-container h1 {
+    color: #4CAF50;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Form styling */
+form {
+    margin-bottom: 20px;
+}
+
+form label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+form input {
+    width: 60%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus {
+    border-color: #4CAF50;
+}
+
+form button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Unread message list */
+.chatmessagesdiv {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #fafafa;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.chatmessagesdiv ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.chatmessagesdiv form {
+    margin: 10px 0;
+}
+
+.chatmessagesdiv form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #2196F3;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.chatmessagesdiv form button:hover {
+    background-color: #1976D2;
+    transform: translateY(-2px);
+}
+
+.chatmessagesdiv form button:active {
+    background-color: #0D47A1;
+    transform: translateY(0);
+}
+
+/* Scrollbar styling */
+.chatmessagesdiv::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chatmessagesdiv::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.chatmessagesdiv::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.chatmessagesdiv::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .chat-container {
+        padding: 15px;
+    }
+
+    form input {
+        width: 100%;
+    }
+}

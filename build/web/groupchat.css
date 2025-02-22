@@ -1,0 +1,27 @@
+.main{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    flex-direction: column;
+    
+    margin-top:20px;
+}
+button{
+    background-color: #4CAF50;
+    color:#ffffff;
+    font-size:30px;
+}
+#groupName{
+    font-size:30px;
+    font-weight: bold;
+    font-family:"sans-serif";
+}
+.label{
+    font-size:30px;
+    font-weight: bold;
+    font-family:"sans-serif";
+}
+.grp{
+        color:#4CAF50;
+}
+   
